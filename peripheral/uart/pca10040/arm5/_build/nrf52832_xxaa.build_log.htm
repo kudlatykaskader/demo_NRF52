@@ -1,0 +1,206 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.16a
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Mateusz Wójcik, AGH, LIC=V8563-AH53R-9XHUW-Q0NK9-NF08Q-31I0T
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.16a
+Toolchain Path:  C:\Keil_v5a\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 (build 20)
+Assembler:       Armasm.exe V5.06 (build 20)
+Linker/Locator:  ArmLink.exe V5.06 (build 20)
+Library Manager: ArmAr.exe V5.06 (build 20)
+Hex Converter:   FromElf.exe V5.06 (build 20)
+CPU DLL:         
+Dialog DLL:      
+Target DLL:      Segger\JL2CM3.dll V2.99.15.2
+Dialog DLL:      TCM.DLL V1.14.5.0
+ 
+<h2>Project:</h2>
+C:\Users\Rain\Documents\USART_EXAMPLE\peripheral\uart\pca10040\arm5\uart_pca10040.uvprojx
+Project File Date:  12/18/2015
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 (build 20)', folder: 'C:\Keil_v5a\ARM\ARMCC\Bin'
+Build target 'nrf52832_xxaa'
+compiling main.c...
+..\..\main.c(53): warning:  #177-D: function "show_error" was declared but never referenced
+  static void show_error(void)
+..\..\main.c: 1 warning, 0 errors
+compiling spi.c...
+spi.c(13): warning:  #177-D: variable "spi" was declared but never referenced
+        static const nrf_drv_spi_t spi = NRF_DRV_SPI_INSTANCE(SPI_INSTANCE);  /**< SPI instance. */
+spi.c(16): warning:  #177-D: variable "m_length" was declared but never referenced
+        static const uint8_t m_length = sizeof(m_tx_buf);        /**< Transfer length. */
+spi.c(39): warning:  #1-D: last line of file ends without a newline
+  }
+spi.c(23): error:  #6: comment unclosed at end of file
+      printf/*NRF_LOG_PRINTF(" Transfer completed.\r\n");
+spi.c(23): error:  #20: identifier "printf" is undefined
+      printf/*NRF_LOG_PRINTF(" Transfer completed.\r\n");
+spi.c(39): error: At end of source:  #65: expected a ";"
+spi.c(39): error: At end of source:  #67: expected a "}"
+spi.c(8): warning:  #550-D: variable "m_tx_buf" was set but never used
+  static uint8_t       m_tx_buf[] = TEST_STRING;           /**< TX buffer. */
+spi.c(9): warning:  #177-D: variable "m_rx_buf" was declared but never referenced
+  static uint8_t       m_rx_buf[sizeof(TEST_STRING)+1];    /**< RX buffer. */
+spi.c: 5 warnings, 4 errors
+assembling arm_startup_nrf52.s...
+compiling system_nrf52.c...
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.5.0.pack
+                ARM::CMSIS:CORE:4.3.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 4.3.0
+
+Package Vendor: NordicSemiconductor
+                http://developer.nordicsemi.com/nRF51_SDK/pieces/nRF_DeviceFamilyPack/NordicSemiconductor.nRF_DeviceFamilyPack.8.3.1.pack
+                NordicSemiconductor::Device:Startup:8.3.1
+                Nordic Semiconductor nRF ARM devices Device Family Pack.
+   * Component: Startup Version: 8.3.1
+
+Package Vendor: NordicSemiconductor
+                http://developer.nordicsemi.com/nRF51_SDK/pieces/nRF_Drivers/NordicSemiconductor.nRF_Drivers.4.0.0-2.alpha.pack
+                NordicSemiconductor::nRF_Drivers:nrf_delay:4.0.0-2.alpha
+                Drivers for Nordic Semiconductor nRF family.
+   * Component: nrf_delay Version: 4.0.0-2.alpha
+   * Component: nrf_gpio Version: 4.0.0-2.alpha
+   * Component: nrf_gpiote Version: 4.0.0-2.alpha
+   * Component: nrf_uart Version: 4.0.0-2.alpha
+   * Component: nrf_error Variant: No_softdevice Version: 4.0.0-2.alpha
+   * Component: nrf_spi Version: 4.0.0-2.alpha
+   * Component: nrf_spim Version: 4.0.0-2.alpha
+   * Component: nrf_uarte Version: 4.0.0-2.alpha
+   * Component: nrf_drv_spi Version: 4.0.0-2.alpha
+   * Component: nrf_drv_uart Version: 4.0.0-2.alpha
+   * Component: nrf_drv_gpiote Version: 4.0.0-2.alpha
+   * Component: nrf_drv_common Version: 4.0.0-2.alpha
+
+Package Vendor: NordicSemiconductor
+                http://developer.nordicsemi.com/nRF51_SDK/pieces/nRF_Examples/NordicSemiconductor.nRF_Examples.11.0.0-2.alpha.pack
+                NordicSemiconductor::Board Support:bsp:Defines:11.0.0-2.alpha
+                Examples and BSP for Nordic Semiconductor nRF family.
+   * Component: bsp Variant: Defines Version: 11.0.0-2.alpha
+
+Package Vendor: NordicSemiconductor
+                http://developer.nordicsemi.com/nRF51_SDK/pieces/nRF_Libraries/NordicSemiconductor.nRF_Libraries.4.0.0-2.alpha.pack
+                NordicSemiconductor::nRF_Libraries:app_error:4.0.0-2.alpha
+                Software modules for Nordic Semiconductor nRF family.
+   * Component: app_error Version: 4.0.0-2.alpha
+   * Component: nrf_assert Version: 4.0.0-2.alpha
+   * Component: retarget Version: 4.0.0-2.alpha
+   * Component: app_fifo Version: 4.0.0-2.alpha
+   * Component: app_util Variant: No_softdevice Version: 4.0.0-2.alpha
+   * Component: nordic_common Version: 4.0.0-2.alpha
+   * Component: app_uart Variant: Fifo Version: 4.0.0-2.alpha
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\Rain\Documents\USART_EXAMPLE\peripheral\uart\pca10040\arm5\RTE
+  C:\Users\Rain\Documents\USART_EXAMPLE\peripheral\uart\pca10040\arm5\RTE\nRF_Drivers\nRF52832_xxAA
+  C:\Users\Rain\Documents\USART_EXAMPLE\peripheral\uart\pca10040\arm5\RTE\nRF_Libraries\nRF52832_xxAA
+  C:\Keil_v5a\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
+  C:\Keil_v5a\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.3.1\Device\Include
+  C:\Keil_v5a\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.5.0\Device\Include
+  C:\Keil_v5a\ARM\PACK\NordicSemiconductor\nRF_Drivers\4.0.0-2.alpha\common
+  C:\Keil_v5a\ARM\PACK\NordicSemiconductor\nRF_Drivers\4.0.0-2.alpha\config
+  C:\Keil_v5a\ARM\PACK\NordicSemiconductor\nRF_Drivers\4.0.0-2.alpha\delay
+  C:\Keil_v5a\ARM\PACK\NordicSemiconductor\nRF_Drivers\4.0.0-2.alpha\gpiote
+  C:\Keil_v5a\ARM\PACK\NordicSemiconductor\nRF_Drivers\4.0.0-2.alpha\hal
+  C:\Keil_v5a\ARM\PACK\NordicSemiconductor\nRF_Drivers\4.0.0-2.alpha\nrf_soc_nosd
+  C:\Keil_v5a\ARM\PACK\NordicSemiconductor\nRF_Drivers\4.0.0-2.alpha\spi_master
+  C:\Keil_v5a\ARM\PACK\NordicSemiconductor\nRF_Drivers\4.0.0-2.alpha\uart
+  C:\Keil_v5a\ARM\PACK\NordicSemiconductor\nRF_Examples\11.0.0-2.alpha\bsp
+  C:\Keil_v5a\ARM\PACK\NordicSemiconductor\nRF_Libraries\4.0.0-2.alpha\fifo
+  C:\Keil_v5a\ARM\PACK\NordicSemiconductor\nRF_Libraries\4.0.0-2.alpha\uart
+  C:\Keil_v5a\ARM\PACK\NordicSemiconductor\nRF_Libraries\4.0.0-2.alpha\util
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:4.3.0
+
+   * Component: NordicSemiconductor::Device:Startup:8.3.1
+      Source file:   Device\Source\arm\arm_startup_nrf52.s
+      Source file:   Device\Source\system_nrf52.c
+      Include file:  Device\Include\system_nrf52.h
+
+   * Component: NordicSemiconductor::nRF_Drivers:nrf_delay:4.0.0-2.alpha
+      Source file:   delay\nrf_delay.c
+      Include file:  delay\nrf_delay.h
+
+   * Component: NordicSemiconductor::nRF_Drivers:nrf_gpio:4.0.0-2.alpha
+      Include file:  hal\nrf_gpio.h
+
+   * Component: NordicSemiconductor::nRF_Drivers:nrf_gpiote:4.0.0-2.alpha
+      Include file:  hal\nrf_gpiote.h
+
+   * Component: NordicSemiconductor::nRF_Drivers:nrf_uart:4.0.0-2.alpha
+      Include file:  hal\nrf_uart.h
+
+   * Component: NordicSemiconductor::nRF_Drivers:nrf_error:No_softdevice:4.0.0-2.alpha
+
+   * Component: NordicSemiconductor::nRF_Drivers:nrf_spi:4.0.0-2.alpha
+      Include file:  hal\nrf_spi.h
+
+   * Component: NordicSemiconductor::nRF_Drivers:nrf_spim:4.0.0-2.alpha
+      Include file:  hal\nrf_spim.h
+
+   * Component: NordicSemiconductor::nRF_Drivers:nrf_uarte:4.0.0-2.alpha
+      Include file:  hal\nrf_uarte.h
+
+   * Component: NordicSemiconductor::nRF_Drivers:nrf_drv_spi:4.0.0-2.alpha
+      Source file:   spi_master\nrf_drv_spi.c
+      Include file:  spi_master\nrf_drv_spi.h
+      Include file:  config\nrf_drv_config.h
+
+   * Component: NordicSemiconductor::nRF_Drivers:nrf_drv_uart:4.0.0-2.alpha
+      Source file:   uart\nrf_drv_uart.c
+      Include file:  uart\nrf_drv_uart.h
+      Include file:  config\nrf_drv_config.h
+
+   * Component: NordicSemiconductor::nRF_Drivers:nrf_drv_gpiote:4.0.0-2.alpha
+      Source file:   gpiote\nrf_drv_gpiote.c
+      Include file:  gpiote\nrf_drv_gpiote.h
+      Include file:  config\nrf_drv_config.h
+
+   * Component: NordicSemiconductor::nRF_Drivers:nrf_drv_common:4.0.0-2.alpha
+      Source file:   common\nrf_drv_common.c
+      Include file:  common\nrf_drv_common.h
+      Include file:  config\nrf_drv_config.h
+
+   * Component: NordicSemiconductor::Board Support:bsp:Defines:11.0.0-2.alpha
+
+   * Component: NordicSemiconductor::nRF_Libraries:app_error:4.0.0-2.alpha
+      Source file:   util\app_error.c
+      Include file:  util\app_error.h
+
+   * Component: NordicSemiconductor::nRF_Libraries:nrf_assert:4.0.0-2.alpha
+      Source file:   util\nrf_assert.c
+      Include file:  util\nrf_assert.h
+
+   * Component: NordicSemiconductor::nRF_Libraries:retarget:4.0.0-2.alpha
+      Source file:   uart\retarget.c
+
+   * Component: NordicSemiconductor::nRF_Libraries:app_fifo:4.0.0-2.alpha
+      Source file:   fifo\app_fifo.c
+      Include file:  fifo\app_fifo.h
+
+   * Component: NordicSemiconductor::nRF_Libraries:app_util:No_softdevice:4.0.0-2.alpha
+      Source file:   util\app_util_platform.c
+
+   * Component: NordicSemiconductor::nRF_Libraries:nordic_common:4.0.0-2.alpha
+
+   * Component: NordicSemiconductor::nRF_Drivers:app_uart:Fifo:4.0.0-2.alpha
+      Source file:   uart\app_uart_fifo.c
+      Include file:  uart\app_uart.h
+Project build/rebuild aborted.
+Build Time Elapsed:  00:00:31
+</pre>
+</body>
+</html>
